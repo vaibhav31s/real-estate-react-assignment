@@ -72,11 +72,11 @@ export default function Home() {
       <div className="flex  flex-row items-center justify-between p-10">
         <h1 className="text-4xl font-bold">Search properties to rent </h1>
         <select className=" rounded-lg text-sm  border-zinc-400 focus:ring-0 ">
-            <option value="search-bar">Search with Search Bar</option>
-            <option value="new york">New York, USA</option>
-            <option value="chicago">Chicago, </option>
-            <option value="san francisco">San Francisco, </option>
-          </select>
+          <option value="search-bar">Search with Search Bar</option>
+          <option value="new york">New York, USA</option>
+          <option value="chicago">Chicago, </option>
+          <option value="san francisco">San Francisco, </option>
+        </select>
       </div>
       <div className="divide-x  flex mx-auto flex-wrap  py-4  rounded-xl shadow-md justify-items-center justify-center   bg-white">
         <div className="px-10 ">
@@ -113,7 +113,7 @@ export default function Home() {
         </div>
         <div className="px-10">
           <button className=" bg-indigo-600 rounded-lg px-10 py-4 text-white items-center justify-center">
-            Search
+            <span className="font-bold">Search</span>
           </button>
         </div>
       </div>
