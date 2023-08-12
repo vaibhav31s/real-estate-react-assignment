@@ -3,7 +3,7 @@ import {FaHouseUser, FaHeart} from "react-icons/fa";
 const Navbar = () => {
   return (
     <div>
-      <nav className="bg-white border-gray-200 dark:bg-gray-900">
+      <nav className=" bg-transparent ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="https://Estatery.com/" className="flex items-center">
             <FaHouseUser className="text-4xl"/>

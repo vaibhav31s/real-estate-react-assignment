@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Card from "../../Components/Card";
 import house from "../../img/house.jpg";
+import { FaCalendar } from "react-icons/fa";
 const additionalData = [
   {
     title: "Sunny Bungalow",
@@ -52,61 +53,72 @@ const additionalData = [
     bathrooms: 3,
     sqft: "4000 sqft",
   },
+  {
+    title: "Country Estate",
+    address: "789 Meadow Lane, Countryside",
+    price: 550000,
+    location: "Countryside",
+    img: house, // Use appropriate image source
+    beds: 4,
+    bathrooms: 3,
+    sqft: "4000 sqft",
+  },
   // Add more data objects here...
 ];
 
 export default function Home() {
   return (
     <div>
-      <div className="flex  flex-row items-center justify-between p-16">
+      <div className="flex  flex-row items-center justify-between p-10">
         <h1 className="text-4xl font-bold">Search properties to rent </h1>
-        <input
-          className="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
-          type="search"
-          name="search"
-          placeholder=" Search with Search Bar "
-        />
+        <select className=" rounded-lg text-sm  border-zinc-400 focus:ring-0 ">
+            <option value="search-bar">Search with Search Bar</option>
+            <option value="new york">New York, USA</option>
+            <option value="chicago">Chicago, </option>
+            <option value="san francisco">San Francisco, </option>
+          </select>
       </div>
-      <div className="flex mx-auto flex-wrap  gap-6 justify-items-center justify-center text-center divide-x bg-white">
-        <div className="mx-auto" >
+      <div className="divide-x  flex mx-auto flex-wrap  py-4  rounded-xl shadow-md justify-items-center justify-center   bg-white">
+        <div className="px-10 ">
           <h1>Location</h1>
-          <select className="border-2 border-gray-300 bg-white rounded-lg text-sm focus:outline-none">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
+          <select className=" rounded-lg text-sm  border-none focus:ring-0 ">
+            <option value="new york">New York, USA</option>
+            <option value="chicago">Chicago, </option>
+            <option value="san francisco">San Francisco, </option>
           </select>
         </div>
-        <div className="mx-auto" >
-          <h1>Location</h1>
-          <select className="border-2 border-gray-300  rounded-lg text-sm focus:outline-none">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
+
+        <div className=" px-10 justify-items-center">
+          <h1>When</h1>
+          <h1 className=" flex flex-row justify-items-center items-center text-center gap-2">
+            Select Move-in Date{" "}
+            <FaCalendar className="text-center text-indigo-500" />{" "}
+          </h1>
+        </div>
+        <div className="px-10">
+          <h1>Price</h1>
+          <select className="rounded-lg text-sm  border-none focus:ring-0">
+            <option value="500-2,500"> $500-$2,500 </option>
+            <option value="2500-3,500"> $2500-$3,500 </option>
+            <option value="3500-5,500"> $3500-$5,500 </option>
           </select>
         </div>
-        <div className="mx-auto" >
-          <h1>Location</h1>
-          <select className="border-2 border-gray-300 h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
+        <div className="px-10 grid grid-row">
+          <h1>Property Type</h1>
+          <select className="rounded-lg text-sm  border-none focus:ring-0 ">
+            <option value="houses"> Houses </option>
+            <option value="apartment"> Apartment </option>
+            <option value="condo"> Condo </option>
           </select>
         </div>
-        <div className="mx-auto" >
-          <h1>Location</h1>
-          <select className="border-2   rounded-lg text-sm focus:outline-none">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
-          </select>
+        <div className="px-10">
+          <button className=" bg-indigo-600 rounded-lg px-10 py-4 text-white items-center justify-center">
+            Search
+          </button>
         </div>
       </div>
 
-      <div className="flex mx-auto flex-wrap  gap-6 justify-items-center justify-center">
+      <div className="flex mx-auto flex-wrap  gap-8  pt-10 justify-items-center justify-center">
         {additionalData.map((data) => (
           <Card {...data} />
         ))}
