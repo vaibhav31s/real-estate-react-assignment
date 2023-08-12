@@ -6,7 +6,7 @@ const additionalData = [
   {
     title: "Sunny Bungalow",
     address: "987 Sunshine Lane, Beachside Town",
-    price: 120000,
+    price: 1200,
     location: "Beachside Town",
     img: house, // Use appropriate image source
     beds: 2,
@@ -16,7 +16,7 @@ const additionalData = [
   {
     title: "Urban Loft",
     address: "456 Loft Avenue, Metropolitan City",
-    price: 280000,
+    price: 2800,
     location: "Metropolitan City",
     img: house, // Use appropriate image source
     beds: 1,
@@ -26,7 +26,7 @@ const additionalData = [
   {
     title: "Rustic Cabin",
     address: "123 Forest Road, Woodland Retreat",
-    price: 95000,
+    price: 9500,
     location: "Woodland Retreat",
     img: house, // Use appropriate image source
     beds: 2,
@@ -36,7 +36,7 @@ const additionalData = [
   {
     title: "Lakefront Haven",
     address: "567 Lakeview Drive, Lakeside Village",
-    price: 320000,
+    price: 3200,
     location: "Lakeside Village",
     img: house, // Use appropriate image source
     beds: 3,
@@ -46,7 +46,7 @@ const additionalData = [
   {
     title: "Country Estate",
     address: "789 Meadow Lane, Countryside",
-    price: 550000,
+    price: 5500,
     location: "Countryside",
     img: house, // Use appropriate image source
     beds: 4,
@@ -56,7 +56,7 @@ const additionalData = [
   {
     title: "Country Estate",
     address: "789 Meadow Lane, Countryside",
-    price: 550000,
+    price: 5500,
     location: "Countryside",
     img: house, // Use appropriate image source
     beds: 4,
@@ -94,7 +94,7 @@ export default function Home() {
         <div className="px-10 grid grid--2 ">
           <h1 className="text-gray-400">Price</h1>
           <div className="w-full -ml-3">
-           <select className="font-bold rounded-lg text-sm    border-none focus:ring-0">
+           <select className="font-bold rounded-lg text-sm  border-none focus:ring-0">
             <option className="text-left" value="500-2,500"> $500-$2,500 </option>
             <option className="text-left" value="2500-3,500"> $2500-$3,500 </option>
             <option className="text-left" value="3500-5,500"> $3500-$5,500 </option>
