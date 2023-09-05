@@ -6,10 +6,10 @@ jobs:
 
     steps:
       - checkout
+      - setup_remote_docker
       - run:
           name: Build Docker Image
           command: |
-            cd real-estate-react-assignment
             docker build -t vaibhavgawad/sih:1 .
       - run:
           name: Push Docker Image
