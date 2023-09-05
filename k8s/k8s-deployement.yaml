@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: real-estate
+spec:
+  selector:
+    matchLabels:
+      app: real-estate
+  template:
+    metadata:
+      labels:
+        app: real-estate
+    spec:
+      containers:
+      - name: real-estate
+        image: <Image>
+        build:
+          context: .
+          dockerfile: Dockerfile
+        ports:
+        - containerPort: 3000
