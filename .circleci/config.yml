@@ -15,5 +15,5 @@ jobs:
       - run:
           name: Push Docker Image
           command: |
-            echo "Megha@12345" | docker login -u "gawadvaibhavv@gmail.com" --password-stdin
+            echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
             docker push vaibhavgawad/sih:1
