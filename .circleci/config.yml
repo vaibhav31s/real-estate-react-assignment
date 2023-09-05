@@ -1,0 +1,19 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: docker:20.10.9
+
+    steps:
+      - checkout
+      - setup_remote_docker:
+          version: 20.10.9
+      - run:
+          name: Build Docker Image
+          command: |
+            docker build -t vaibhavgawad/sih:1 .
+      - run:
+          name: Push Docker Image
+          command: |
+            echo "Megha@12345" | docker login -u "gawadvaibhavv@gmail.com" --password-stdin
+            docker push vaibhavgawad/sih:1
